@@ -1,0 +1,31 @@
+import React from "react";
+import { Text, View, StyleSheet, Image, Button} from "react-native";
+import iman from "./assets/Portada1.jpeg";
+const app = () => {
+  return (
+    <View style={style.container}>
+      <Text style={style.title}>BIENVENIDOS</Text>
+      <Image
+       source={iman}
+       style = {style.imangen}
+      />
+      <Button
+       color={"#00000"}
+       title="Inciar Seccion"
+       onPress={() => console.log ("Ingrese su Usuario")}
+      />
+    </View>
+  );
+};
+
+const style = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "#8b4513",
+  },
+  title: { fontSize: 35, color: "#f5f5dc"},
+  imangen: {height: 190, width: 190, borderRadius: 85}
+});
+export default app;
